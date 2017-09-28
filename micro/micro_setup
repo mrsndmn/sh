@@ -21,3 +21,5 @@ cp micro/runtime/colorschemes/ ~/.config/micro/colorschemes
 rm -rf micro
 
 cp ./settings.json ~/.config/micro/
+
+echo "export EDIOR=micro" >> ~/.zshrc
