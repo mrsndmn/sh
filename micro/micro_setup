@@ -1,7 +1,9 @@
 #!/bin/bash
-micro_ver='micro-1.3.3-dev.11'
+micro_ver='micro-1.3.4-67'
 
-curl -o micro.tar.gz -L https://github.com/zyedidia/micro/releases/download/nightly/micro-1.3.4-67-linux64.tar.gz
+str="https://github.com/zyedidia/micro/releases/download/nightly/${micro_ver}-linux64.tar.gz"
+
+curl -o micro.tar.gz -L $str
 tar -xzf micro.tar.gz
 rm micro.tar.gz
 
@@ -16,8 +18,8 @@ mkdir -p ~/.config/micro/syntax
 mkdir -p ~/.config/micro/colorschemes 
 
 git clone https://github.com/zyedidia/micro
-cp micro/runtime/syntax/* ~/.config/micro/syntax
-cp micro/runtime/colorschemes/ ~/.config/micro/colorschemes
+cp -r micro/runtime/syntax/* ~/.config/micro/syntax
+cp -r micro/runtime/colorschemes/ ~/.config/micro/colorschemes
 rm -rf micro
 
 cp ./settings.json ~/.config/micro/
