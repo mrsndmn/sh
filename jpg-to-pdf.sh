@@ -32,5 +32,5 @@ echo "Enter filename: ";
 read filename;
 
 # jpg to pdf
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$filename" /usr/share/ghostscript/9.20/lib/viewjpeg.ps -c "$list";
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$filename" /usr/share/ghostscript/9.22/lib/viewjpeg.ps -c "$list";
 
